@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #120427;
+  color: #ffffff;
+  font-family: Roboto, "Open Sans", sans-serif;
+  text-decoration: none;
+  min-height: 100vh;
+}
+
+p,
+span {
+  font-size: 1rem;
+}
+
+h1 {
+  font-size: 2.25rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 25px;
+}
+
+.container {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 50px;
+  min-height: 100vh;
+}
+
+section div {
+  width: 50%;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+}
+
+nav ul {
+  list-style: none;
+}
+
+/* Profile */
+
+.profile-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.profile-container img {
+  width: 150px;
+  border-radius: 50%;
+}
+
+.profile-container p,
+.profile-container span {
+  margin: 15px 0;
+}
+
+.location span {
+  background-image: url("./location.png");
+  background-repeat: no-repeat;
+  background-position: top left;
+  padding-left: 15px;
+  padding-top: 0px;
+}
+
+.contact nav ul {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.contact li {
+  margin-right: 20px;
+}
+
+.profile-container {
+  border-right: 3px solid #e78ea5;
+  margin-right: 100px;
+}
+
+/* Skills */
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.skills-container p {
+  color: #c7cad1;
+}
+
+.location,
+.contact,
+.skills,
+.skills-list,
+.about {
+  width: 100%;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.skills-list nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.skills-list li {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.skills-list li:before {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid #e78ea5;
+  float: left;
+  margin: 2px 10px 0 0;
+}
+
+@media (max-width: 1050px) {
+  .container {
+    padding: 50px;
+  }
+
+  .skills-list {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skills-list {
+    flex-direction: row;
+  }
+  
+  .profile-container, .skills-container {
+    width: 100%;
+  }
+
+  .profile-container {
+    margin-right: 0px;
+    border: 0px;
+  }
+
+  .profile-container h1, .contact {
+    margin: 30px 0;
+  }
+}
